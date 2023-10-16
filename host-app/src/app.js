@@ -14,6 +14,10 @@ const App = () => {
       }}
     >
       <h1>Host App</h1>
+      <Suspense fallback={<p>Loading...</p>}>
+        <App1 />
+        <App2 />
+      </Suspense>
     </div>
   );
 };

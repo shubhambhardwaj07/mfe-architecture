@@ -33,7 +33,6 @@ module.exports = {
         App1: "AppOne@http://localhost:3001/remoteEntry.js",
         App2: "AppTwo@http://localhost:3002/remoteEntry.js",
       },
-      shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
