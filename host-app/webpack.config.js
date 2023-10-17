@@ -30,8 +30,8 @@ module.exports = {
       name: "Host",
       filename: "remoteEntry.js",
       remotes: {
-        App1: "AppOne@http://localhost:3001/remoteEntry.js",
-        App2: "AppTwo@http://localhost:3002/remoteEntry.js",
+        AppOne: "AppOne@http://localhost:3001/remoteEntry.js",
+        AppTwo: "AppTwo@http://localhost:3002/remoteEntry.js",
       },
     }),
     new HtmlWebpackPlugin({
