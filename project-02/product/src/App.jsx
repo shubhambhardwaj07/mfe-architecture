@@ -1,16 +1,25 @@
-import React from "react";
+import React, { Suspense, useState } from "react";
 import ReactDOM from "react-dom";
 
 import "./index.scss";
+import SafeComponent from "./SafeComponent";
 
-import Header from "home/Header";
-import Footer from "home/Footer";
+const Header = React.lazy(() => import("home/Header"));
+const Footer = React.lazy(() => import("home/Footer"));
 
-const App = () => (
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <Header />
-    <div className="my-10">Product Page Content</div>
-    <Footer />
-  </div>
-);
+const App = () => {
+  return (
+    <div className="mt-10 text-3xl mx-auto max-w-6xl">
+      <SafeComponent>
+        <Suspense fallback="<div>Loading...</div>">
+          <Header />
+        </Suspense>
+      </SafeComponent>
+      <div className="my-10">Product Page Content</div>
+      <Suspense fallback="<div>Loading...</div>">
+        <Footer />
+      </Suspense>
+    </div>
+  );
+};
 ReactDOM.render(<App />, document.getElementById("app"));

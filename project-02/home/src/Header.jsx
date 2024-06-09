@@ -1,11 +1,8 @@
 import React from "react";
+import "./index.scss";
 
-function Header() {
-  return (
-    <div className="p-5 bg-blue-600 text-white text-3xl font-bold">
-      Fidget Spinners
-    </div>
-  );
+function Header({ app }) {
+  return <div className="text">Fidget Spinners | {app.name}</div>;
 }
 
 export default Header;
