@@ -1,5 +1,8 @@
 import React, { Suspense, useState } from "react";
 import ReactDOM from "react-dom";
+import "remixicon/fonts/remixicon.css";
+import ProductContent from "./ProductContent";
+import { Switch, Route } from "react-router-dom";
 
 import "./index.scss";
 import SafeComponent from "./SafeComponent";
@@ -15,7 +18,11 @@ const App = () => {
           <Header app={{ name: "Product" }} />
         </Suspense>
       </SafeComponent>
-      <div className="my-10">Product Page Content</div>
+      <div className="my-10">
+        <Switch>
+          <Route path="/product/:id" component={<ProductContent />} />
+        </Switch>
+      </div>
       <Suspense fallback="<div>Loading...</div>">
         <Footer />
       </Suspense>
