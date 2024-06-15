@@ -4,7 +4,7 @@ import "remixicon/fonts/remixicon.css";
 
 import Header from "home/Header";
 import Footer from "home/Footer";
-import CartContent from "./CartContent";
+import CartContent from "cart/CartContent";
 import { BrowserRouter } from "react-router-dom";
 
 import "./index.scss";
