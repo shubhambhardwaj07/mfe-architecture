@@ -12,7 +12,7 @@ const App = () => {
     <div className="mt-10 text-3xl mx-auto max-w-6xl">
       <SafeComponent>
         <Suspense fallback="<div>Loading...</div>">
-          <Header />
+          <Header app={{ name: "Product" }} />
         </Suspense>
       </SafeComponent>
       <div className="my-10">Product Page Content</div>
