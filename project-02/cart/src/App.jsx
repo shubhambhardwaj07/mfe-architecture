@@ -5,6 +5,7 @@ import "remixicon/fonts/remixicon.css";
 import Header from "home/Header";
 import Footer from "home/Footer";
 import CartContent from "./CartContent";
+import { BrowserRouter } from "react-router-dom";
 
 import "./index.scss";
 
@@ -17,4 +18,9 @@ const App = () => (
     <Footer />
   </div>
 );
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("app")
+);

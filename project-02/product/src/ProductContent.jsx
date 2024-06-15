@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { getProductById, currency } from "home/products";
 import placeAddToCart from "addtocart/placeAddToCart";
 
-export default function ProductContent() {
+const ProductContent = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
 
@@ -44,4 +44,6 @@ export default function ProductContent() {
       </div>
     </div>
   );
-}
+};
+
+export default ProductContent;
